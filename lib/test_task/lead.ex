@@ -55,4 +55,8 @@ defmodule TestTask.Lead do
     status = Enum.random(["error", "live"])
     Machinery.transition_to(lead, TestTask.LeadStateMachine, status)
   end
+
+  def lead_transition_to(lead, status) do
+    Machinery.transition_to(lead, TestTask.LeadStateMachine, status)
+  end
 end
